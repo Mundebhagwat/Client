@@ -78,7 +78,7 @@ function Register() {
 
 		if (valid) {
 			try {
-				const response = await axios.post('http://localhost:5000/api/register', {
+				const response = await axios.post('https://server-863d.onrender.com/api/register', {
 					name,
 					email,
 					password,

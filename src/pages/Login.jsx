@@ -1,62 +1,4 @@
-// // src/pages/Login.jsx
-// import React, { useState } from 'react'
-// import { useDispatch } from 'react-redux'
-// import { loginSuccess } from '../authStore/authSlice'
-// import { useNavigate } from 'react-router-dom'
 
-// const Login = () => {
-// 	const [email, setEmail] = useState('')
-// 	const [password, setPassword] = useState('')
-// 	const dispatch = useDispatch()
-// 	const navigate = useNavigate()
-
-// 	const handleSubmit = async e => {
-// 		e.preventDefault()
-
-// 		// Simulate an API login request and response data
-// 		const responseData = {
-// 			message: 'Login successful',
-// 			token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2JjNjFkZjFkOGRkNjlhNDQyMzAwZGEiLCJyb2xlIjoiQ3VzdG9tZXIiLCJpYXQiOjE3NDA0MDAyNDIsImV4cCI6MTc0MTAwNTA0Mn0.3tVWc1zk5RxZPo2cJbuwbbKD5FgzDSFSwrnd0ZiLf4g',
-// 			user: {
-// 				id: '67bc61df1d8dd69a442300da',
-// 				name: 'John Doe',
-// 				email: 'johndoe@example.com',
-// 				role: 'Customer',
-// 				phoneNumber: '+91 9876543210',
-// 			},
-// 		}
-
-// 		// Dispatch the login action with the response data
-// 		dispatch(loginSuccess({ token: responseData.token, user: responseData.user }))
-
-// 		// Navigate to a protected route (e.g., Dashboard)
-// 		navigate('/dashboard')
-// 	}
-
-// 	return (
-// 		<form onSubmit={handleSubmit}>
-// 			<input
-// 				type='email'
-// 				placeholder='Email'
-// 				value={email}
-// 				onChange={e => setEmail(e.target.value)}
-// 				required
-// 			/>
-// 			<input
-// 				type='password'
-// 				placeholder='Password'
-// 				value={password}
-// 				onChange={e => setPassword(e.target.value)}
-// 				required
-// 			/>
-// 			<button type='submit'>Login</button>
-// 		</form>
-// 	)
-// }
-
-// export default Login
-
-// src/pages/Login.jsx
 import React, { useState } from 'react'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
@@ -111,7 +53,7 @@ function Login() {
 
 		if (valid) {
 			try {
-				const response = await axios.post('http://localhost:5000/api/login', {
+				const response = await axios.post('https://server-863d.onrender.com/api/login', {
 					email,
 					password,
 				})

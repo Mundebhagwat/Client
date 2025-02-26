@@ -74,7 +74,7 @@ function VendorDashboard() {
 
 	const getAllListings = async token => {
 		try {
-			const response = await axios.get('http://localhost:5000/api/vendor/listing', {
+			const response = await axios.get('https://server-863d.onrender.com/api/vendor/listing', {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -132,7 +132,7 @@ function VendorDashboard() {
 
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/api/vendor/listing',
+				'https://server-863d.onrender.com/api/vendor/listing',
 				{
 					type: listingForm.type,
 					name: listingForm.name,
@@ -216,7 +216,7 @@ function VendorDashboard() {
 
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/api/vendor/unit', // Adjust the endpoint if needed
+				'https://server-863d.onrender.com/api/vendor/unit', // Adjust the endpoint if needed
 				{
 					listingId: selectedListing._id,
 					unitType: unitForm.unitType,
@@ -259,7 +259,7 @@ function VendorDashboard() {
 	// Function to fetch all units
 	const getAllUnits = async token => {
 		try {
-			const response = await axios.get('http://localhost:5000/api/vendor/unit', {
+			const response = await axios.get('https://server-863d.onrender.com/api/vendor/unit', {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -289,7 +289,7 @@ function VendorDashboard() {
 				</Typography>
 				<Tabs value={tabIndex} onChange={handleChangeTab} aria-label='Dashboard Tabs'>
 					<Tab label='Add Listing' />
-					<Tab label='Add Unit' style={{ display: 'none' }} /> //showAddUnitTab ? 'block'
+					<Tab label='Add Unit' style={{ display: 'none' }} /> 
 					<Tab label='Manage Listings' />
 					<Tab label='Manage Units' />
 					<Tab label='Booking Requests' />

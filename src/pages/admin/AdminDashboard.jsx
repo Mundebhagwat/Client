@@ -73,7 +73,7 @@ const AdminDashboard = () => {
 
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/api/admin/register-vendor', // Adjust the endpoint as needed
+				'https://server-863d.onrender.com/api/admin/register-vendor', // Adjust the endpoint as needed
 				vendorForm,
 				{
 					headers: {
@@ -98,7 +98,7 @@ const AdminDashboard = () => {
 	// Function to get all listings (with status: Pending, Approved, or Rejected)
 	const getAllListings = async () => {
 		try {
-			const response = await axios.get('http://localhost:5000/api/admin/aprove-listing', {
+			const response = await axios.get('https://server-863d.onrender.com/api/admin/aprove-listing', {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -120,7 +120,7 @@ const AdminDashboard = () => {
 	const handleStatusChange = async (listingId, newStatus) => {
 		try {
 			const response = await axios.put(
-				`http://localhost:5000/api/admin/aprove-listing`,
+				`https://server-863d.onrender.com/api/admin/aprove-listing`,
 				{ status: newStatus, listingId },
 				{
 					headers: {

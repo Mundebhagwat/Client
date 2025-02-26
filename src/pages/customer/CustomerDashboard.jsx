@@ -54,7 +54,7 @@ const CustomerDashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/customer/dashboard', {
+                const response = await axios.get('https://server-863d.onrender.com/api/customer/dashboard', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -73,7 +73,7 @@ const CustomerDashboard = () => {
         setSelectedHotel(hotel);
         setOpen(true);
         try {
-            const response = await axios.get(`http://localhost:5000/api/unit/${hotel._id}`, {
+            const response = await axios.get(`https://server-863d.onrender.com/api/unit/${hotel._id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -108,7 +108,7 @@ const CustomerDashboard = () => {
 
     const fetchUserBookings = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/bookings/user', {
+            const response = await axios.get('https://server-863d.onrender.com/api/bookings/user', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -126,7 +126,7 @@ const CustomerDashboard = () => {
     const handleBookUnit = async unitId => {
         try {
             const response = await axios.post(
-                'http://localhost:5000/api/bookings/',
+                'https://server-863d.onrender.com/api/bookings/',
                 { listingId: selectedHotel._id, unitId, amount: selectedHotel.pricing },
                 {
                     headers: {
