@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000, // Use PORT from environment variable or default to 3000
-    host: true, // Allow access from Render's environment
+    host: true,// Allow access from Render's environment
+    allowedHosts: ['client-8blf.onrender.com']
   },
 })
