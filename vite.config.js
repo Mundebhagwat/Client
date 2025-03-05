@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     port: 3000, // Use PORT from environment variable or default to 3000
     host: true,// Allow access from Render's environment
-    allowedHosts: ['client-8blf.onrender.com']
+    allowedHosts: ['client-8blf.onrender.com','hotel-booking-lgm4.onrender.com']
   },
 })
