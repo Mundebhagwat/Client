@@ -92,7 +92,7 @@ function VendorDashboard() {
 			setListings(data)
 		}
 		fetchListings()
-	}, [tabIndex, token, getAllListings])
+	}, [tabIndex, token])
 
 	const handleChangeTab = (event, newValue) => {
 		setTabIndex(newValue)
@@ -279,7 +279,7 @@ function VendorDashboard() {
 			setUnits(data)
 		}
 		fetchUnits()
-	}, [tabIndex, token, getAllListings])
+	}, [tabIndex, token])
 
 	return (
 		<Container maxWidth='lg'>
